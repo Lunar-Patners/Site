@@ -1,3 +1,3 @@
 Lunar Partners.
-D.Magoto
+D.Magoro
 E.Magoro
