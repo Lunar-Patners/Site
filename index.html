@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="B.jpg?v=2">
+<title>Lunar Partners</title>
+<!-- SEO Meta -->
+<meta name="description" content="Lunar Partners builds modern digital solutions, software, and systems that turn ideas into real-world impact.">
+<meta name="keywords" content="Lunar Partners, software development, web development, technology, digital solutions">
+<meta name="author" content="Lunar Partners">
+<!-- Canonical -->
+<link rel="canonical" href="https://www.lunarpatners.co.za/">
+<!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+<meta property="og:title" content="Lunar Partners">
+<meta property="og:description" content="Building ideas into reality through modern digital solutions.">
+<meta property="og:url" content="https://www.lunarpatners.co.za/">
+<meta property="og:type" content="website">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lunar Partners">
+<meta name="twitter:description" content="Building ideas into reality through modern digital solutions.">
+
+<!-- Design System Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+    /* Reset & Base Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: #ffffff;
+        color: #111111;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+    }
+
+    /* Common Elegant Typography */
+    h1, h2, h3, .serif-font {
+        font-family: 'Playfair Display', serif;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+    }
+
+    /* Blue Accent Styling */
+    .first-letter-blue::first-letter {
+        color: #0044cc; /* Bright premium blue */
+    }
+    .text-blue {
+        color: #0044cc;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .line-separator {
+        border-top: 1px solid #e0e0e0;
+        margin: 4rem 0;
+    }
+
+    /* Header & Navigation */
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        padding: 2rem 0;
+    }
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 2rem;
+    }
+    
+    /* Brand Header: Logo placed before the company name text */
+    .brand-link {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        flex-shrink: 0;
+    }
+    .logo-container img {
+	display:block;
+        height: 40px;
+        width: auto;
+        filter: invert(1); /* Keeps logo crisp white against dark hero background */
+    }
+    .brand-text {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.5rem;
+        color: #ffffff;
+        letter-spacing: -0.01em;
+        white-space: nowrap;
+    }
+    .brand-text span {
+        color: #0044cc; /* First letter blue in header */
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        flex-wrap: nowrap;
+    }
+    nav ul a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        font-size: 0.9rem;
+        letter-spacing: 0.05em;
+        transition: color 0.3s ease;
+        white-space: nowrap;
+    }
+    nav ul a:hover {
+        color: #ffffff;
+    }
+    .cta-nav-btn {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 0.6rem 1.5rem;
+        font-size: 0.85rem;
+        color: #ffffff;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    .cta-nav-btn:hover {
+        background: #ffffff;
+        color: #111111;
+    }
+
+    /* Hero Section */
+    .hero {
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000') no-repeat center center/cover;
+        min-height: 95vh;
+        display: flex;
+        align-items: center;
+        color: #ffffff;
+        padding-top: 8rem;
+    }
+    .hero-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 4rem;
+        align-items: flex-end;
+        padding-bottom: 4rem;
+    }
+    .hero-left h1 {
+        font-size: 4rem;
+        line-height: 1.15;
+        margin-bottom: 2.5rem;
+    }
+ 
+   
+    .hero-right {
+        text-align: right;
+        padding-bottom: 1rem;
+    }
+    .hero-right p {
+        font-size: 1.2rem;
+        color: #cccccc;
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+    }
+    .hero-cta {
+        display: inline-flex;
+        align-items: center;
+        background: #0044cc;
+        color: #ffffff;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: background 0.3s ease;
+    }
+    .hero-cta:hover {
+        background: #0033aa;
+    }
+
+    /* About Section */
+    .about {
+        padding: 8rem 0;
+    }
+    .about-grid {
+        display: grid;
+        grid-template-columns: 0.4fr 1.2fr 0.4fr;
+        gap: 3rem;
+    }
+    .about-label {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+    }
+    .about-center p {
+        font-size: 1.8rem;
+        font-family: 'Playfair Display', serif;
+        line-height: 1.5;
+        color: #222222;
+    }
+    .about-right {
+        font-size: 0.85rem;
+        color: #666666;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .about-right-top {
+        border-left: 2px solid #0044cc;
+        padding-left: 1rem;
+    }
+
+    /* Services Section */
+    .services {
+        padding: 2rem 0 6rem;
+    }
+    .services-header {
+        margin-bottom: 4rem;
+    }
+    .services-list {
+        display: flex;
+        flex-direction: column;
+    }
+    .service-row {
+        display: grid;
+        grid-template-columns: 0.1fr 0.4fr 1fr 0.3fr;
+        padding: 3rem 0;
+        border-top: 1px solid #e0e0e0;
+        align-items: start;
+        transition: background-color 0.3s ease;
+    }
+    .service-row:last-child {
+        border-bottom: 1px solid #e0e0e0;
+    }
+    .service-num {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9rem;
+        color: #0044cc;
+        font-weight: 500;
+        padding-top: 0.3rem;
+    }
+    .service-title h3 {
+        font-size: 1.6rem;
+        color: #111111;
+    }
+    .service-desc p {
+        color: #555555;
+        font-size: 1rem;
+        max-width: 600px;
+        padding-right: 2rem;
+    }
+    .service-action {
+        text-align: right;
+    }
+    .service-btn {
+        display: inline-block;
+        background: #111111;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 0.8rem;
+        padding: 0.6rem 1.2rem;
+        transition: background 0.3s ease;
+    }
+    .service-btn:hover {
+        background: #0044cc;
+    }
+
+    /* Advantage Section */
+    .advantage {
+        padding: 6rem 0;
+        background-color: #fafafa;
+    }
+    .advantage-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+    .advantage-card {
+        border-left: 2px solid #0044cc;
+        padding-left: 2rem;
+    }
+    .advantage-card h4 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    .advantage-card p {
+        color: #666666;
+        font-size: 0.95rem;
+    }
+
+    /* Contact / Footer Section */
+    footer {
+        background-color: #111111;
+        color: #ffffff;
+        padding: 6rem 0 3rem;
+    }
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        margin-bottom: 6rem;
+    }
+    .footer-left h2 {
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+    .footer-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .contact-details {
+        text-align: right;
+    }
+    .contact-item {
+        margin-bottom: 1.5rem;
+    }
+    .contact-item span {
+        display: block;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        color: #888888;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.2rem;
+    }
+    .contact-item a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
+    }
+    .contact-item a:hover {
+        color: #0044cc;
+    }
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #222222;
+        padding-top: 2rem;
+        font-size: 0.8rem;
+        color: #666666;
+    }
+    
+    .footer-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .footer-brand img {
+        height: 30px;
+        filter: invert(1);
+        opacity: 0.7;
+    }
+    .footer-brand span {
+        color: #ffffff;
+        font-family: 'Playfair Display', serif;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1500px) {
+        nav ul {
+            gap: 1rem;
+        }
+        nav ul a {
+            font-size: 0.75rem;
+        }
+        .cta-nav-btn {
+            padding: 0.55rem 0.9rem;
+            font-size: 0.72rem;
+        }
+        .brand-text {
+            font-size: 1.15rem;
+        }
+        .logo-container img {
+            height: 32px;
+        }
+    }
+    @media (max-width: 1100px) {
+        nav ul {
+            gap: 0.7rem;
+        }
+        nav ul a {
+            font-size: 0.68rem;
+        }
+        .cta-nav-btn {
+            padding: 0.5rem 0.7rem;
+            font-size: 0.65rem;
+        }
+    }
+    @media (max-width: 992px) {
+        .hero-grid, .about-grid, .service-row, .advantage-grid, .footer-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        .hero-left h1 { font-size: 2.8rem; }
+        .hero-right { text-align: left; }
+        .service-action { text-align: left; }
+        .footer-right { align-items: flex-start; }
+        .contact-details { text-align: left; }
+        nav ul { display: none; }
+    }
+</style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav-container">
+            <!-- Brand Link: Logo placed directly before company title text -->
+            <a href="#" class="brand-link">
+                <div class="logo-container">
+                    <img src="X.png" alt="Lunar Partners Logo">
+                </div>
+                <div class="brand-text">Lunar Partners</div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#about">Our Vision</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#advantage">Our Advantage</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-nav-btn">Request Consultation &rarr;</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-left">
+                
+                <br><br>
+                <!-- Title configured with blue first-letter styling -->
+                <h1 class="first-letter-blue">Precision Solutions for Modern Business Challenges</h1>
+            </div>
+            <div class="hero-right">
+                <p>Transforming organizational complexities into streamlined, profitable outcomes through unparalleled strategic insight and innovative engineering.</p>
+                <a href="#services" class="hero-cta">Explore Corporate Services &nbsp;&rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container about-grid">
+            <div class="about-label">About Us.</div>
+            <div class="about-center">
+                <!-- Text configured with blue first-letter styling -->
+                <p class="first-letter-blue">Lunar Partners integrates structural accounting principles with elite IT system engineering. We redefine how modern enterprises navigate compliance, manage financial clarity, and deploy robust digital infrastructure to ensure lasting real-world impact.</p>
+            </div>
+            <div class="about-right">
+                <div class="about-right-top">
+                    <strong>Comprehensive Advisory</strong><br>
+                    Bridging fiscal strategy and enterprise technology infrastructure seamlessly.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="about-label services-header">Our Services.</div>
+            
+            <div class="services-list">
+                <!-- Service 1 -->
+                <div class="service-row">
+                    <div class="service-num">01.</div>
+                    <div class="service-title"><h3 class="first-letter-blue">IT Services &amp; Systems</h3></div>
+                    <div class="service-desc">
+                        <p>Designing, implementing, and managing elite digital infrastructure. From custom software development to network security architectures, we build systems that scale with enterprise needs.</p>
+                    </div>
+                    <div class="service-action">
+                        <a href="#contact" class="service-btn">Get a Quote</a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-row">
+                    <div class="service-num">02.</div>
+                    <div class="service-title"><h3 class="first-letter-blue">Specialized Accounting</h3></div>
+                    <div class="service-desc">
+                        <p>Streamlining institutional accounting pipelines, tax structures, and accurate balance sheet reporting. We bring corporate financial structures into perfect clarity and bulletproof compliance.</p>
+                    </div>
+                    <div class="service-action">
+                        <a href="#contact" class="service-btn">Get a Quote</a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-row">
+                    <div class="service-num">03.</div>
+                    <div class="service-title"><h3 class="first-letter-blue">Strategic Consulting</h3></div>
+                    <div class="service-desc">
+                        <p>Diagnosing critical operational bottleneck issues at the intersection of business tech and finance. We equip leadership teams with structural blueprints to accelerate workflow efficiency.</p>
+                    </div>
+                    <div class="service-action">
+                        <a href="#contact" class="service-btn">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Advantage Section -->
+    <section id="advantage" class="advantage">
+        <div class="container">
+            <div class="about-label" style="margin-bottom: 4rem;">Our Advantage.</div>
+            <div class="advantage-grid">
+                <div class="advantage-card">
+                    <h4 class="first-letter-blue">Dual Ecosystem Experts</h4>
+                    <p>Unlike standard firms, we solve your business hurdles from both sides simultaneously: mitigating technical risks via IT engineering and protecting margins via veteran financial strategy.</p>
+                </div>
+                <div class="advantage-card">
+                    <h4 class="first-letter-blue">Tailor-Made Integration</h4>
+                    <p>No cookie-cutter templates. We audit your existing tech stack and workflow structure to hand-craft tools and models built purely around your operational goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div class="footer-left">
+                <h2 class="first-letter-blue">Let’s resolve your business complexities.</h2>
+                <p style="color: #888888; font-size: 1.1rem; max-width: 450px;">Get in touch with our team today to establish an integrated IT and financial optimization roadmap.</p>
+            </div>
+            <div class="footer-right">
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span>Professional Inquiries</span>
+                        <a href="mailto:info@lunarpatners.co.za">info@lunarpatners.co.za</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>Direct Communication Line 1</span>
+                        <a href="tel:+27743275762">+27 74 327 5762</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>Direct Communication Line 2</span>
+                        <a href="tel:+27626517414">+27 62 651 7414</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <div>
+                &copy; 2026 Lunar Partners. All Rights Reserved. Inspired by corporate law design layouts.
+            </div>
+            <div class="footer-brand">
+                <img src="logo.jpeg" alt="Lunar Partners Logo">
+                <span>Lunar Partners</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
