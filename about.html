@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/jpg" href="/B.jpg?v=2">
-<title>IT Services | Lunar Partners</title>
+<title>About Us| Lunar Partners</title>
 <meta name="description" content="Request a tailored quote for cloud deployment, cybersecurity, and automation services from Lunar Partners.">
 <link rel="canonical" href="https://www.lunarpatners.co.za/quote-it.html">
 
@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
 <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+   * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
         font-family: 'Inter', sans-serif;
@@ -67,6 +67,21 @@
         color: #0044cc;
         font-weight: 500;
         flex-shrink: 0;
+    }
+    .included-list li:has(.sub-list) { display: block; }
+    .included-list li:has(.sub-list)::before { margin-right: 0.9rem; }
+    .included-list li > .sub-list { list-style: none; margin-top: 0.9rem; padding-left: 1.9rem; }
+    .included-list .sub-list li {
+        border-top: none;
+        padding: 0.5rem 0;
+        color: #666666;
+        font-size: 0.88rem;
+        display: flex;
+        gap: 0.6rem;
+    }
+    .included-list .sub-list li::before {
+        content: "–";
+        color: #999999;
     }
 
     /* Form */
@@ -137,110 +152,54 @@
         .quote-intro h1 { font-size: 1.9rem; }
         .form-row { grid-template-columns: 1fr; }
         .quote-form-wrap { padding: 2rem; }
+
     }
 </style>
 </head>
 <body>
 
-    <div class="top-bar container">
+<div class="top-bar container">
         <a href="index.html" class="back-link">&larr; Back to Home</a>
     </div>
 
-    <section class="quote-intro container">
-        <div class="about-label">IT Services · Get a Quote</div>
+   <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container about-grid">
+		<br>
+            <div class="about-label">About Us.</div>
+            <div class="about-center">
+                <!-- Text configured with blue first-letter styling -->
+                <p class="first-letter-blue">Lunar Partners is not just another advisory firm — we are business builders.
+		Founded in Cape Town, we combine accounting expertise with IT innovation to help companies sharpen their numbers, streamline their systems, and scale with confidence. <br><br>
+
+		<p class="first-letter-blue">With hands-on experience across real estate and property development, automotive dealerships, IT, and logistics and trucking, we understand the realities of running a business. From keeping books compliant to overcoming system hurdles, we know what it takes to move companies forward.</p><br>
+		<p class="first-letter-blue">We don’t just advise from the sidelines. We’ve been in the trenches — managing books, building systems, and solving problems where every decision counts. That’s why our clients trust us to deliver solutions that are practical, scalable, and designed for real-world impact.</p>
+            </div>
+	</div>
     </section>
+            
+        
 
-    <section class="quote-main">
-        <div class="container quote-grid">
-            <div class="quote-info">
-                <h2 class="first-letter-blue">What's included</h2>
-                <p>Our IT service is built to keep your business efficient, secure, and future-ready — whatever your current setup looks like.</p>
-                <ul class="included-list">
-                    <li>Cloud deployment &amp; migration</li>
-                    <li>Cybersecurity assessments &amp; hardening</li>
-                    <li>Process &amp; systems automation</li>
-                    <li>IT infrastructure support</li>
-                    <li>Systems integration with existing tools</li>
-                    <li>Ongoing maintenance &amp; monitoring</li>
-                </ul>
-            </div>
 
-            <div class="quote-form-wrap">
-                <h3 class="first-letter-blue">Request your quote</h3>
-                <p class="form-sub">Fields marked with * are required.</p>
-                <form id="itQuoteForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="fullName">Full Name *</label>
-                            <input type="text" id="fullName" name="fullName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Company Name</label>
-                            <input type="text" id="company" name="company">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="serviceNeeded">Which service do you need? *</label>
-                        <select id="serviceNeeded" name="serviceNeeded" required>
-                            <option value="">Select an option</option>
-                            <option>Cloud Deployment / Migration</option>
-                            <option>Cybersecurity</option>
-                            <option>Systems Automation</option>
-                            <option>IT Infrastructure Support</option>
-                            <option>Full IT Package</option>
-                            <option>Not Sure Yet</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="details">Message:</label>
-                        <textarea id="details" name="details" placeholder="Industry, size of business, current systems, security concerns, timelines you're working toward..."></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Quote Request &rarr;</button>
-                    <p class="form-note">Submitting this form will open your email client with your details pre-filled, addressed to our team.</p>
-                </form>
-            </div>
+
+
+   <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container about-grid">
+		<br>
+            <div class="about-label">Our Vision,</div>
+            <div class="about-center">
+                <!-- Text configured with blue first-letter styling -->
+		<p class="first-letter-blue">To be the partner businesses turn to when they want numbers that make sense and systems that deliver results — across industries from property and automotive to IT and logistics.</p>          
+
+	    </div>
+
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            &copy; 2026 Lunar Partners. All Rights Reserved.
-        </div>
-    </footer>
-
-    <script>
-        document.getElementById('itQuoteForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const fullName = document.getElementById('fullName').value;
-            const company = document.getElementById('company').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const serviceNeeded = document.getElementById('serviceNeeded').value;
-            const details = document.getElementById('details').value;
-
-            const subject = encodeURIComponent('Quote Request: IT Services - ' + fullName);
-            const body = encodeURIComponent(
-                'Name: ' + fullName + '\n' +
-                'Company: ' + company + '\n' +
-                'Email: ' + email + '\n' +
-                'Phone: ' + phone + '\n' +
-                'Service needed: ' + serviceNeeded + '\n\n' +
-                'Details:\n' + details
-            );
-
-            window.location.href = 'mailto:contact@lunarpatners.co.za?subject=' + subject + '&body=' + body;
-        });
-    </script>
+	
+           
+   
 
 </body>
 </html>
