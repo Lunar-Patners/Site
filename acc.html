@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/jpg" href="/B.jpg?v=2">
+<title>Accounting Services | Lunar Partners</title>
+<meta name="description" content="Request a tailored quote for bookkeeping, reconciliation, financial reporting, AFS drafting, tax and CIPC compliance from Lunar Partners.">
+<link rel="canonical" href="https://www.lunarpatners.co.za/quote-accounting.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: #ffffff;
+        color: #111111;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, .serif-font { font-family: 'Playfair Display', serif; font-weight: 400; letter-spacing: -0.02em; }
+    .first-letter-blue::first-letter { color: #0044cc; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+    /* Simple top bar */
+    .top-bar { padding: 2.5rem 0 0; }
+    .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #666666;
+        text-decoration: none;
+        font-size: 0.85rem;
+        letter-spacing: 0.03em;
+        transition: color 0.2s ease;
+    }
+    .back-link:hover { color: #0044cc; }
+
+    /* Intro */
+    .quote-intro { padding: 2.5rem 0 4rem; }
+    .about-label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; text-decoration: underline; text-underline-offset: 6px; color: #888888; margin-bottom: 1.2rem; }
+    .quote-intro h1 { font-size: 2.4rem; line-height: 1.25; max-width: 780px; margin-bottom: 1.2rem; color: #111111; }
+    .quote-intro p { font-size: 1.02rem; color: #666666; max-width: 600px; }
+
+    /* Main layout */
+    .quote-main { padding: 0 0 6rem; }
+    .quote-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+
+    .quote-info h2 { font-size: 1.6rem; margin-bottom: 1.5rem; }
+    .quote-info p { color: #555555; margin-bottom: 2rem; }
+    .included-list { list-style: none; }
+    .included-list li {
+        padding: 1.1rem 0;
+        border-top: 1px solid #e8e8e8;
+        display: flex;
+        gap: 1rem;
+        color: #333333;
+        font-size: 0.96rem;
+    }
+    .included-list li:last-child { border-bottom: 1px solid #e8e8e8; }
+    .included-list li::before {
+        content: "→";
+        color: #0044cc;
+        font-weight: 500;
+        flex-shrink: 0;
+    }
+    .included-list li:has(.sub-list) { display: block; }
+    .included-list li:has(.sub-list)::before { margin-right: 0.9rem; }
+    .included-list li > .sub-list { list-style: none; margin-top: 0.9rem; padding-left: 1.9rem; }
+    .included-list .sub-list li {
+        border-top: none;
+        padding: 0.5rem 0;
+        color: #666666;
+        font-size: 0.88rem;
+        display: flex;
+        gap: 0.6rem;
+    }
+    .included-list .sub-list li::before {
+        content: "–";
+        color: #999999;
+    }
+
+    /* Form */
+    .quote-form-wrap {
+        background-color: #fafafa;
+        border: 1px solid #e8e8e8;
+        padding: 3rem;
+    }
+    .quote-form-wrap h3 { font-size: 1.35rem; margin-bottom: 0.5rem; }
+    .quote-form-wrap .form-sub { color: #888888; font-size: 0.9rem; margin-bottom: 2rem; }
+    .form-group { margin-bottom: 1.5rem; }
+    .form-group label {
+        display: block;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: #666666;
+        margin-bottom: 0.5rem;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 0.85rem 1rem;
+        border: 1px solid #d5d5d5;
+        background: #ffffff;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.95rem;
+        color: #111111;
+        transition: border-color 0.2s ease;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: #0044cc;
+    }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .submit-btn {
+        display: inline-flex;
+        align-items: center;
+        background: #0044cc;
+        color: #ffffff;
+        border: none;
+        padding: 1rem 2.2rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        font-family: 'Inter', sans-serif;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        width: 100%;
+        justify-content: center;
+    }
+    .submit-btn:hover { background: #0033aa; }
+    .form-note { font-size: 0.78rem; color: #999999; margin-top: 1rem; text-align: center; }
+
+    footer {
+        border-top: 1px solid #e8e8e8;
+        color: #999999;
+        padding: 2rem 0;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    @media (max-width: 900px) {
+        .quote-grid { grid-template-columns: 1fr; gap: 3rem; }
+        .quote-intro h1 { font-size: 1.9rem; }
+        .form-row { grid-template-columns: 1fr; }
+        .quote-form-wrap { padding: 2rem; }
+    }
+</style>
+</head>
+<body>
+
+    <div class="top-bar container">
+        <a href="index.html" class="back-link">&larr; Back to Home</a>
+    </div>
+
+    <section class="quote-intro container">
+        <div class="about-label">Accounting Services · Get a Quote</div>
+    </section>
+
+    <section class="quote-main">
+        <div class="container quote-grid">
+            <div class="quote-info">
+                <h2 class="first-letter-blue">What's included</h2>
+                <p>Our accounting service is built to keep your books clean, your filings on time, and your business audit-ready — whatever stage you're at.</p>
+                <ul class="included-list">
+                    <li>Accounting services</li>
+                    <li>Financial services</li>
+                    <li>Financial reporting services (in cooperation with external consultants)
+                        <ul class="sub-list">
+                            <li>Consulting on financial reporting matters (i.e. training in International Financial Reporting Standards (IFRS) and the International Financial Reporting Standard for Small and Medium-sized Entities (IFRS for SMEs))</li>
+                            <li>Quality control and review of annual financial statements</li>
+                        </ul>
+                    </li>
+                    <li>Wills, bequests, estates</li>
+                    <li>Company secretariat services</li>
+                    <li>Payroll systems</li>
+                    <li>Tax compliance and consulting</li>
+                    <li>Wealth and investment management (in alliance with Meq Capital)</li>
+                    <li>Broad-based Black Economic Empowerment (B-BBEE) services</li>
+                    <li>Business advisory services</li>
+                </ul>
+            </div>
+
+            <div class="quote-form-wrap">
+                <h3 class="first-letter-blue">Request your quote</h3>
+                <p class="form-sub">Fields marked with * are required.</p>
+                <form id="accountingQuoteForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="serviceNeeded">Which service do you need? *</label>
+                        <select id="serviceNeeded" name="serviceNeeded" required>
+                            <option value="">Select an option</option>
+                            <option>Accounting services</option>
+                            <option>Financial services</option>
+                            <optgroup label="Financial reporting services (in cooperation with external consultants)">
+                                <option>Consulting on financial reporting matters (IFRS / IFRS for SMEs training)</option>
+                                <option>Quality control and review of annual financial statements</option>
+                            </optgroup>
+                            <option>Wills, bequests, estates</option>
+                            <option>Company secretariat services</option>
+                            <option>Payroll systems</option>
+                            <option>Tax compliance and consulting</option>
+                            <option>Wealth and investment management (in alliance with Meq Capital)</option>
+                            <option>Broad-based Black Economic Empowerment (B-BBEE) services</option>
+                            <option>Business advisory services</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="details">Tell us about your business</label>
+                        <textarea id="details" name="details" placeholder="Industry, size of business, current bookkeeping setup, deadlines you're working toward..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Quote Request &rarr;</button>
+                    <p class="form-note">Submitting this form will open your email client with your details pre-filled, addressed to our team.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            &copy; 2026 Lunar Partners. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('accountingQuoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const fullName = document.getElementById('fullName').value;
+            const company = document.getElementById('company').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const serviceNeeded = document.getElementById('serviceNeeded').value;
+            const details = document.getElementById('details').value;
+
+            const subject = encodeURIComponent('Quote Request: Accounting Services - ' + fullName);
+            const body = encodeURIComponent(
+                'Name: ' + fullName + '\n' +
+                'Company: ' + company + '\n' +
+                'Email: ' + email + '\n' +
+                'Phone: ' + phone + '\n' +
+                'Service needed: ' + serviceNeeded + '\n\n' +
+                'Details:\n' + details
+            );
+
+            window.location.href = 'mailto:contact@lunarpatners.co.za?subject=' + subject + '&body=' + body;
+        });
+    </script>
+
+</body>
+</html>
