@@ -32,7 +32,6 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-	overflow:hidden;
     }
     html {
         scroll-behavior: smooth;
@@ -144,79 +143,6 @@
     .cta-nav-btn:hover {
         background: #ffffff;
         color: #111111;
-    }
-
-    /* Mobile Hamburger Menu */
-    .hamburger-btn {
-        display: none;
-        flex-direction: column;
-        justify-content: center;
-        gap: 5px;
-        width: 28px;
-        height: 22px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-        flex-shrink: 0;
-        z-index: 200;
-    }
-    .hamburger-btn span {
-        display: block;
-        width: 100%;
-        height: 2px;
-        background: #ffffff;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-    .hamburger-btn.open span:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
-    }
-    .hamburger-btn.open span:nth-child(2) {
-        opacity: 0;
-    }
-    .hamburger-btn.open span:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
-    }
-    .mobile-nav-panel {
-        display: none;
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 75%;
-        max-width: 320px;
-        background: #111111;
-        z-index: 150;
-        padding: 6rem 2.5rem 2rem;
-        transform: translateX(100%);
-        transition: transform 0.35s ease;
-    }
-    .mobile-nav-panel.open {
-        transform: translateX(0);
-    }
-    .mobile-nav-panel ul {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-    .mobile-nav-panel ul a {
-        color: #ffffff;
-        text-decoration: none;
-        font-size: 1.1rem;
-        letter-spacing: 0.03em;
-    }
-    .mobile-nav-overlay {
-        display: none;
-        position: fixed;
-        inset: 0;
-        background: rgba(0,0,0,0.5);
-        z-index: 140;
-        opacity: 0;
-        transition: opacity 0.35s ease;
-    }
-    .mobile-nav-overlay.open {
-        opacity: 1;
     }
 
     /* Hero Section */
@@ -493,38 +419,65 @@
         .service-action { text-align: left; }
         .footer-right { align-items: flex-start; }
         .contact-details { text-align: left; }
-        nav ul { display: none; }
-        .hamburger-btn { display: flex; }
-        .mobile-nav-panel { display: block; }
-        .mobile-nav-overlay { display: block; }
-    }
-    @media (max-width: 600px) {
-        .container {
-            padding: 0 1rem;
-        }
         .nav-container {
             gap: 0.6rem;
         }
-        .logo-container img {
-            height: 28px;
+        nav {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            transform: translateX(1px);
         }
-        .brand-text {
-            font-size: 1rem;
+        nav ul {
+            gap: 0.6rem;
+        }
+        nav ul a {
+            font-size: 9px;
         }
         .cta-nav-btn {
-            padding: 0.45rem 0.7rem;
-            font-size: 0.62rem;
+            padding: 0.35rem 0.6rem;
+            font-size: 0.6rem;
+            transform: translateX(2px);
         }
     }
-    @media (max-width: 380px) {
+    @media (max-width: 700px) {
+        .container {
+            padding: 0 1rem;
+        }
         .brand-text {
-            font-size: 0.85rem;
+            display: none;
+        }
+        .logo-container img {
+            height: 26px;
+        }
+        .nav-container {
+            gap: 0.4rem;
+        }
+        nav ul {
+            gap: 0.45rem;
+        }
+        nav ul a {
+            font-size: 9px;
+            letter-spacing: 0.02em;
         }
         .cta-nav-btn {
-            padding: 0.4rem 0.55rem;
+            padding: 0.3rem 0.5rem;
+            font-size: 0.52rem;
         }
         .cta-arrow {
             display: none;
+        }
+    }
+    @media (max-width: 400px) {
+        nav ul {
+            gap: 0.3rem;
+        }
+        nav ul a {
+            font-size: 9px;
+        }
+        .cta-nav-btn {
+            padding: 0.28rem 0.4rem;
+            font-size: 0.46rem;
         }
     }
 </style>
@@ -550,50 +503,8 @@
                 </ul>
             </nav>
             <a href="normal.html" class="cta-nav-btn">Request Consultation <span class="cta-arrow">&rarr;</span></a>
-            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </div>
     </header>
-
-    <!-- Mobile Nav Overlay & Panel -->
-    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
-    <div class="mobile-nav-panel" id="mobileNavPanel">
-        <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#advantage">Our Advantage</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
-
-    <script>
-        const hamburgerBtn = document.getElementById('hamburgerBtn');
-        const mobileNavPanel = document.getElementById('mobileNavPanel');
-        const mobileNavOverlay = document.getElementById('mobileNavOverlay');
-
-        function toggleMobileNav() {
-            const isOpen = mobileNavPanel.classList.toggle('open');
-            mobileNavOverlay.classList.toggle('open', isOpen);
-            hamburgerBtn.classList.toggle('open', isOpen);
-            hamburgerBtn.setAttribute('aria-expanded', isOpen);
-        }
-
-        function closeMobileNav() {
-            mobileNavPanel.classList.remove('open');
-            mobileNavOverlay.classList.remove('open');
-            hamburgerBtn.classList.remove('open');
-            hamburgerBtn.setAttribute('aria-expanded', 'false');
-        }
-
-        hamburgerBtn.addEventListener('click', toggleMobileNav);
-        mobileNavOverlay.addEventListener('click', closeMobileNav);
-        mobileNavPanel.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', closeMobileNav);
-        });
-    </script>
 
     <!-- Hero Section -->
     <section class="hero">
